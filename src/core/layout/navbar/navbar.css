@@ -1,0 +1,85 @@
+.navbar {
+    /* width: 100%; */
+    padding: 10px 20px;
+    background: #272626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 20px; */
+    /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: solid 1px gray;
+}
+
+/* Left side */
+.nav-logo {
+    width: 180px; /* Make them equal */
+    display: flex;
+    justify-content: flex-start;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Center Search Bar */
+.nav-search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-search input {
+    width: 60%;
+    min-width: 200px;
+    max-width: 450px;
+    padding: 10px 15px;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-search input:focus {
+    border-color: #ffffff;
+}
+
+/* Right Buttons */
+.nav-actions {
+    width: 180px; /* Make them equal */
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+    background: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-search input {
+        width: 100%;
+    }
+
+    .nav-btn {
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-search {
+        display: none;
+        /* Hide search bar on small mobile */
+    }
+}
